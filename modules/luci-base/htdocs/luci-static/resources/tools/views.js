@@ -78,9 +78,16 @@ var CBILogreadBox = function(logtag, name) {
 				let loglines = await callLogRead(this.fetchMaxRows, false, true)
 					.then((logEntries) => {
 						const dateObj = new Intl.DateTimeFormat(undefined, {
-								dateStyle: 'medium',
-								timeStyle: (ts == 0) ? 'long' : 'full',
+								/* Short date, time to milliseconds */
+								/* dateStyle: 'medium', */
+								month: '2-digit',
+                        		day: '2-digit',  
+								/* timeStyle: (ts == 0) ? 'long' : 'full', */
+								hour: '2-digit',
 								hourCycle: (hc == 0) ? undefined : hc,
+								minute: '2-digit',
+                        		second: '2-digit', 
+                        		fractionalSecondDigits: '3'
 								timeZone: tz
 						});
 
