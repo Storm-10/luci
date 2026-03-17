@@ -87,7 +87,7 @@ var CBILogreadBox = function(logtag, name) {
 								hourCycle: (hc == 0) ? undefined : hc,
 								minute: '2-digit',
                         		second: '2-digit', 
-                        		fractionalSecondDigits: '3'
+                        		fractionalSecondDigits: '3',
 								timeZone: tz
 						});
 
